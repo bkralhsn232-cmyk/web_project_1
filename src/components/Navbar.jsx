@@ -9,6 +9,9 @@ function Navbar() {
       gap: '20px',
       justifyContent: 'center'
     }}>
+      
+      <Link to="/" style={{ color: 'white', textDecoration: 'none', fontSize: '18px', fontWeight: 'bold' }}>🏠 الرئيسية</Link>
+      
       <Link to="/login" style={{ color: 'white', textDecoration: 'none', fontSize: '18px' }}>🔐 تسجيل الدخول</Link>
       <Link to="/register" style={{ color: 'white', textDecoration: 'none', fontSize: '18px' }}>📝 إنشاء حساب</Link>
       <Link to="/about" style={{ color: 'white', textDecoration: 'none', fontSize: '18px' }}>ℹ️ معلومات</Link>
