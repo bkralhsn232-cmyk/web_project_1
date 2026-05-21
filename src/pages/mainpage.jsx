@@ -84,6 +84,14 @@ function Home() {
 
   return (
     <div className="home-container" style={{ backgroundColor: '#1c0a21', minHeight: '100vh', padding: '20px', color: 'white' }}>
+      <style>{`
+        body, html {
+          margin: 0 !important;
+          padding: 0 !important;
+          background-color: #1c0a21;
+        }
+      `}</style>
+
       <header className="main-header" style={{ textAlign: 'center', marginBottom: '30px' }}>
         <div className="title-area" style={{ marginBottom: '15px' }}>
           <span className="movie-icon" style={{ fontSize: '30px' }}>🎬</span>
