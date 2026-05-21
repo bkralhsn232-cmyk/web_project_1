@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const INITIAL_MOVIES = [
-  { id: 1, title: 'Frozen', rating: 7.4, year: 2013, poster: 'https://images.unsplash.com/photo-1594909122845-11baa439b7bf?auto=format&fit=crop&w=300&q=80' },
-  { id: 2, title: 'Titanic', rating: 7.8, year: 1997, poster: 'https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=300&q=80' },
-  { id: 3, title: 'Avatar', rating: 7.9, year: 2009, poster: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=300&q=80' },
-  { id: 4, title: 'Avengers', rating: 8.0, year: 2012, poster: 'https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&w=300&q=80' },
-  { id: 5, title: 'Joker', rating: 8.4, year: 2019, poster: 'https://images.unsplash.com/photo-1601513525393-039377b6ddb7?auto=format&fit=crop&w=300&q=80' },
-  { id: 6, title: 'Gladiator', rating: 8.5, year: 2000, poster: 'https://images.unsplash.com/photo-1559583985-c80d8ad9b29f?auto=format&fit=crop&w=300&q=80' },
-  { id: 7, title: 'Interstellar', rating: 8.6, year: 2014, poster: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=300&q=80' },
-  { id: 8, title: 'The Matrix', rating: 8.7, year: 1999, poster: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=300&q=80' }
+  { id: 1, title: 'Frozen', rating: 7.4, year: 2013, poster: 'https://image.tmdb.org/t/p/w500/kg0Uq0bU9p5bIOnkF7g6fW8YI9v.jpg' },
+  { id: 2, title: 'Titanic', rating: 7.8, year: 1997, poster: 'https://image.tmdb.org/t/p/w500/9xjZS2rlVxm8SFg8R6vXEBjQIYt.jpg' },
+  { id: 3, title: 'Avatar', rating: 7.9, year: 2009, poster: 'https://image.tmdb.org/t/p/w500/kyeE67v0U4mGv6m6SKv0t3B6c0L.jpg' },
+  { id: 4, title: 'Avengers', rating: 8.0, year: 2012, poster: 'https://image.tmdb.org/t/p/w500/RYMX26T6vYDWm767j61SgN601M.jpg' },
+  { id: 5, title: 'Joker', rating: 8.4, year: 2019, poster: 'https://image.tmdb.org/t/p/w500/udDcl707vCwb16G3gRWPva4gaBt.jpg' },
+  { id: 6, title: 'Gladiator', rating: 8.5, year: 2000, poster: 'https://image.tmdb.org/t/p/w500/ty8Tz6tgwTLyswGuwF6gYg6pt3H.jpg' },
+  { id: 7, title: 'Interstellar', rating: 8.6, year: 2014, poster: 'https://image.tmdb.org/t/p/w500/gEU2QniE6E77NIvSImsHTwZ06cB.jpg' },
+  { id: 8, title: 'The Matrix', rating: 8.7, year: 1999, poster: 'https://image.tmdb.org/t/p/w500/f89ZwY9Z2wY7vA877Z3m067Sj6g.jpg' }
 ];
 
 function Home() {
@@ -77,4 +77,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Home
