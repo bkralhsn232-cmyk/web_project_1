@@ -27,27 +27,86 @@ function Home() {
     return 0;
   });
 
+  // --- INLINE STYLES DEFINITION ---
+  const styles = {
+    gridContainer: {
+      display: 'grid',
+      // This automatically creates columns that fit perfectly on any screen size
+      gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))',
+      gap: '25px',
+      padding: '20px',
+      maxWidth: '1200px',
+      margin: '0 auto',
+    },
+    cardLink: {
+      textDecoration: 'none',
+      color: 'inherit',
+    },
+    card: {
+      backgroundColor: '#2c3e50', // Dark elegant background matching your navbar
+      borderRadius: '10px',
+      overflow: 'hidden',
+      display: 'flex',
+      flexDirection: 'column',
+      boxShadow: '0 4px 8px rgba(0,0,0,0.2)',
+    },
+    posterWrap: {
+      width: '100%',
+      aspectRatio: '2 / 3', // Maintains professional movie poster proportions
+      overflow: 'hidden',
+    },
+    posterImg: {
+      width: '100%',
+      height: '100%',
+      objectFit: 'cover',
+    },
+    details: {
+      padding: '15px',
+      color: 'white',
+      textAlign: 'center',
+    },
+    title: {
+      margin: '0 0 8px 0',
+      fontSize: '18px',
+      whiteSpace: 'nowrap',
+      overflow: 'hidden',
+      textOverflow: 'ellipsis', // Adds ... if text is too long
+    },
+    meta: {
+      display: 'flex',
+      justifyContent: 'space-between',
+      fontSize: '14px',
+      color: '#bdc3c7',
+    },
+    rating: {
+      color: '#f1c40f', // Bright gold for stars
+      fontWeight: 'bold',
+    }
+  };
+
   return (
-    <div className="home-container">
-      <header className="main-header">
-        <div className="title-area">
-          <span className="movie-icon">🎬</span>
-          <h1>Movies</h1>
+    <div className="home-container" style={{ padding: '20px' }}>
+      <header className="main-header" style={{ textAlign: 'center', marginBottom: '30px' }}>
+        <div className="title-area" style={{ marginBottom: '15px' }}>
+          <span className="movie-icon" style={{ fontSize: '30px' }}>🎬</span>
+          <h1 style={{ display: 'inline', marginLeft: '10px' }}>Movies</h1>
         </div>
         
-        <div className="controls-row">
+        <div className="controls-row" style={{ display: 'flex', gap: '15px', justifyContent: 'center' }}>
           <input 
             type="text" 
             placeholder="Search movies..." 
             className="search-input"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
+            style={{ padding: '8px 12px', borderRadius: '5px', border: '1px solid #ccc', width: '250px' }}
           />
           
           <select 
             className="sort-dropdown"
             value={sortOrder}
             onChange={(e) => setSortOrder(e.target.value)}
+            style={{ padding: '8px 12px', borderRadius: '5px', border: '1px solid #ccc' }}
           >
             <option value="lowToHigh">Rating: Low to High</option>
             <option value="highToHigh">Rating: High to Low</option>
@@ -55,18 +114,19 @@ function Home() {
         </div>
       </header>
 
-      <main className="movies-grid">
+      {/* Applying the grid structure straight to the main tag */}
+      <main style={styles.gridContainer}>
         {sortedMovies.map((movie) => (
-          <Link to={`/forum/${movie.id}`} key={movie.id} className="movie-card-link">
-            <div className="movie-card">
-              <div className="movie-poster-wrap">
-                <img src={movie.poster} alt={movie.title} className="movie-poster-img" />
+          <Link to={`/forum/${movie.id}`} key={movie.id} style={styles.cardLink}>
+            <div style={styles.card}>
+              <div style={styles.posterWrap}>
+                <img src={movie.poster} alt={movie.title} style={styles.posterImg} />
               </div>
-              <div className="movie-details">
-                <h3 className="movie-title">{movie.title}</h3>
-                <div className="movie-meta">
-                  <span className="movie-rating">⭐ {movie.rating}</span>
-                  <span className="movie-year">{movie.year}</span>
+              <div style={styles.details}>
+                <h3 style={styles.title}>{movie.title}</h3>
+                <div style={styles.meta}>
+                  <span style={styles.rating}>⭐ {movie.rating}</span>
+                  <span>{movie.year}</span>
                 </div>
               </div>
             </div>
@@ -77,4 +137,4 @@ function Home() {
   );
 }
 
-export default Home
+export default Home;
