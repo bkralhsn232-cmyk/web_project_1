@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const INITIAL_MOVIES = [
-  { id: 1, title: 'Frozen', rating: 7.4, year: 2013, poster: 'https://upload.wikimedia.org/wikipedia/en/0/05/Frozen_%282013_film%29_poster.jpg },
+  { id: 1, title: 'Frozen', rating: 7.4, year: 2013, poster: 'https://upload.wikimedia.org/wikipedia/en/0/05/Frozen_%282013_film%29_poster.jpg' },
   { id: 2, title: 'Titanic', rating: 7.8, year: 1997, poster: 'https://upload.wikimedia.org/wikipedia/en/1/18/Titanic_%281997_film%29_poster.png' },
   { id: 3, title: 'Avatar', rating: 7.9, year: 2009, poster: 'https://upload.wikimedia.org/wikipedia/en/d/d6/Avatar_%282009_film%29_poster.jpg' },
   { id: 4, title: 'Avengers', rating: 8.0, year: 2012, poster: 'https://upload.wikimedia.org/wikipedia/en/8/8a/The_Avengers_%282012_film%29_poster.jpg' },
@@ -27,11 +27,11 @@ function Home() {
     return 0;
   });
 
-  // --- INLINE STYLES DEFINITION ---
+  
   const styles = {
     gridContainer: {
       display: 'grid',
-      // This automatically creates columns that fit perfectly on any screen size
+      
       gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))',
       gap: '25px',
       padding: '20px',
@@ -43,7 +43,7 @@ function Home() {
       color: 'inherit',
     },
     card: {
-      backgroundColor: '#2c3e50', // Dark elegant background matching your navbar
+      backgroundColor: '#2c3e50', 
       borderRadius: '10px',
       overflow: 'hidden',
       display: 'flex',
@@ -52,7 +52,7 @@ function Home() {
     },
     posterWrap: {
       width: '100%',
-      aspectRatio: '2 / 3', // Maintains professional movie poster proportions
+      aspectRatio: '2 / 3',
       overflow: 'hidden',
     },
     posterImg: {
@@ -70,7 +70,7 @@ function Home() {
       fontSize: '18px',
       whiteSpace: 'nowrap',
       overflow: 'hidden',
-      textOverflow: 'ellipsis', // Adds ... if text is too long
+      textOverflow: 'ellipsis', 
     },
     meta: {
       display: 'flex',
@@ -79,7 +79,7 @@ function Home() {
       color: '#bdc3c7',
     },
     rating: {
-      color: '#f1c40f', // Bright gold for stars
+      color: '#f1c40f', 
       fontWeight: 'bold',
     }
   };
@@ -114,7 +114,7 @@ function Home() {
         </div>
       </header>
 
-      {/* Applying the grid structure straight to the main tag */}
+     
       <main style={styles.gridContainer}>
         {sortedMovies.map((movie) => (
           <Link to={`/forum/${movie.id}`} key={movie.id} style={styles.cardLink}>
