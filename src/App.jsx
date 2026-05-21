@@ -3,13 +3,15 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import About from './pages/About';
 import Navbar from './components/Navbar';
+import Home from './pages/Home'; 
 
 function App() {
   return (
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Login />} />
+        <Route path="/" element={<Home />} />
+        
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/about" element={<About />} />
