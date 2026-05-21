@@ -27,11 +27,9 @@ function Home() {
     return 0;
   });
 
-  
   const styles = {
     gridContainer: {
       display: 'grid',
-      
       gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))',
       gap: '25px',
       padding: '20px',
@@ -43,12 +41,12 @@ function Home() {
       color: 'inherit',
     },
     card: {
-      backgroundColor: '#2c3e50', 
+      backgroundColor: '#32143a',
       borderRadius: '10px',
       overflow: 'hidden',
       display: 'flex',
       flexDirection: 'column',
-      boxShadow: '0 4px 8px rgba(0,0,0,0.2)',
+      boxShadow: '0 6px 12px rgba(0,0,0,0.4)',
     },
     posterWrap: {
       width: '100%',
@@ -70,26 +68,26 @@ function Home() {
       fontSize: '18px',
       whiteSpace: 'nowrap',
       overflow: 'hidden',
-      textOverflow: 'ellipsis', 
+      textOverflow: 'ellipsis',
     },
     meta: {
       display: 'flex',
       justifyContent: 'space-between',
       fontSize: '14px',
-      color: '#bdc3c7',
+      color: '#bdaec6',
     },
     rating: {
-      color: '#f1c40f', 
+      color: '#f1c40f',
       fontWeight: 'bold',
     }
   };
 
   return (
-    <div className="home-container" style={{ padding: '20px' }}>
+    <div className="home-container" style={{ backgroundColor: '#1c0a21', minHeight: '100vh', padding: '20px', color: 'white' }}>
       <header className="main-header" style={{ textAlign: 'center', marginBottom: '30px' }}>
         <div className="title-area" style={{ marginBottom: '15px' }}>
           <span className="movie-icon" style={{ fontSize: '30px' }}>🎬</span>
-          <h1 style={{ display: 'inline', marginLeft: '10px' }}>Movies</h1>
+          <h1 style={{ display: 'inline', marginLeft: '10px', color: '#ffffff' }}>Movies</h1>
         </div>
         
         <div className="controls-row" style={{ display: 'flex', gap: '15px', justifyContent: 'center' }}>
@@ -99,14 +97,14 @@ function Home() {
             className="search-input"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            style={{ padding: '8px 12px', borderRadius: '5px', border: '1px solid #ccc', width: '250px' }}
+            style={{ padding: '8px 12px', borderRadius: '5px', border: '1px solid #4a2854', backgroundColor: '#2d1633', color: 'white', width: '250px' }}
           />
           
           <select 
             className="sort-dropdown"
             value={sortOrder}
             onChange={(e) => setSortOrder(e.target.value)}
-            style={{ padding: '8px 12px', borderRadius: '5px', border: '1px solid #ccc' }}
+            style={{ padding: '8px 12px', borderRadius: '5px', border: '1px solid #4a2854', backgroundColor: '#2d1633', color: 'white' }}
           >
             <option value="lowToHigh">Rating: Low to High</option>
             <option value="highToHigh">Rating: High to Low</option>
@@ -114,7 +112,6 @@ function Home() {
         </div>
       </header>
 
-     
       <main style={styles.gridContainer}>
         {sortedMovies.map((movie) => (
           <Link to={`/forum/${movie.id}`} key={movie.id} style={styles.cardLink}>
