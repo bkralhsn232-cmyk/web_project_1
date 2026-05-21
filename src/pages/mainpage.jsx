@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const INITIAL_MOVIES = [
-  { id: 1, title: 'Frozen', rating: 7.4, year: 2013, poster: 'https://image.tmdb.org/t/p/w500/kg0Uq0bU9p5bIOnkF7g6fW8YI9v.jpg' },
-  { id: 2, title: 'Titanic', rating: 7.8, year: 1997, poster: 'https://image.tmdb.org/t/p/w500/9xjZS2rlVxm8SFg8R6vXEBjQIYt.jpg' },
-  { id: 3, title: 'Avatar', rating: 7.9, year: 2009, poster: 'https://image.tmdb.org/t/p/w500/kyeE67v0U4mGv6m6SKv0t3B6c0L.jpg' },
-  { id: 4, title: 'Avengers', rating: 8.0, year: 2012, poster: 'https://image.tmdb.org/t/p/w500/RYMX26T6vYDWm767j61SgN601M.jpg' },
-  { id: 5, title: 'Joker', rating: 8.4, year: 2019, poster: 'https://image.tmdb.org/t/p/w500/udDcl707vCwb16G3gRWPva4gaBt.jpg' },
-  { id: 6, title: 'Gladiator', rating: 8.5, year: 2000, poster: 'https://image.tmdb.org/t/p/w500/ty8Tz6tgwTLyswGuwF6gYg6pt3H.jpg' },
-  { id: 7, title: 'Interstellar', rating: 8.6, year: 2014, poster: 'https://image.tmdb.org/t/p/w500/gEU2QniE6E77NIvSImsHTwZ06cB.jpg' },
-  { id: 8, title: 'The Matrix', rating: 8.7, year: 1999, poster: 'https://image.tmdb.org/t/p/w500/f89ZwY9Z2wY7vA877Z3m067Sj6g.jpg' }
+  { id: 1, title: 'Frozen', rating: 7.4, year: 2013, poster: 'https://upload.wikimedia.org/wikipedia/en/0/05/Frozen_%282013_film%29_poster.jpg },
+  { id: 2, title: 'Titanic', rating: 7.8, year: 1997, poster: 'https://upload.wikimedia.org/wikipedia/en/1/18/Titanic_%281997_film%29_poster.png' },
+  { id: 3, title: 'Avatar', rating: 7.9, year: 2009, poster: 'https://upload.wikimedia.org/wikipedia/en/d/d6/Avatar_%282009_film%29_poster.jpg' },
+  { id: 4, title: 'Avengers', rating: 8.0, year: 2012, poster: 'https://upload.wikimedia.org/wikipedia/en/8/8a/The_Avengers_%282012_film%29_poster.jpg' },
+  { id: 5, title: 'Joker', rating: 8.4, year: 2019, poster: 'https://upload.wikimedia.org/wikipedia/en/e/e1/Joker_%282019_film%29_poster.jpg' },
+  { id: 6, title: 'Gladiator', rating: 8.5, year: 2000, poster: 'https://upload.wikimedia.org/wikipedia/en/f/fb/Gladiator_%282000_film_poster%29.png' },
+  { id: 7, title: 'Interstellar', rating: 8.6, year: 2014, poster: 'https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg' },
+  { id: 8, title: 'The Matrix', rating: 8.7, year: 1999, poster: 'https://upload.wikimedia.org/wikipedia/en/d/db/The_Matrix.png' }
 ];
 
 function Home() {
